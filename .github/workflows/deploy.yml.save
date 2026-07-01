@@ -1,4 +1,4 @@
-name: Deploy to Linode
+name: Deploy Vite to Linode
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -18,12 +18,12 @@ jobs:
         with:
           node-version: 20
 
-      - name: Build React app
+      - name: Install & Build
         run: |
           npm install
           npm run build
 
-      - name: Deploy to server
+      - name: Deploy to Linode
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.LINODE_IP }}
