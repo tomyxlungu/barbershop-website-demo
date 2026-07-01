@@ -79,7 +79,7 @@ export default function Home() {
             className="hf-display text-white italic font-semibold leading-none"
             style={{ fontSize: "clamp(3rem, 9vw, 7.5rem)", letterSpacing: "0.06em" }}
           >
-            thomas
+            i tired
           </motion.h1>
 
           {/* Mustache ornament */}
